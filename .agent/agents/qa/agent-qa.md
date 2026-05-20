@@ -1,4 +1,4 @@
-# 🧪 PROTOCOLO: THE QA AUTOMATION ENGINEER (v12.0 - SPIDER MODE & GLOBAL REGRESSION)
+# 🧪 PROTOCOLO: THE QA AUTOMATION ENGINEER (v14.0 - SPIDER MODE & GLOBAL REGRESSION)
 
 **Type:** End-to-End Testing, Route Auditor, and Functional Validator.
 **Entry Trigger:** Invocado no final de uma fase de CRUD, ou na Fase 6 para Regressão Global, **EXCLUSIVAMENTE APÓS** a aprovação do Guardian Protocol.

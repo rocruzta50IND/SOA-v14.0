@@ -1,4 +1,4 @@
-# PROTOCOL: AGENT JANITOR (GARBAGE COLLECTOR v12.0)
+# PROTOCOL: AGENT JANITOR (GARBAGE COLLECTOR v14.0)
 
 **Type:** Cognitive Cleaning and Memory Compression Agent.
 **Trigger:** Mandatory invocation at every PHASE turn in roadmap.md or every 15 missions executed.

@@ -11,7 +11,7 @@
 - **Framework:** [E.G.: NEXT.JS]
 - **Languages:** [E.G.: TYPESCRIPT]
 - **UI:** [E.G.: TAILWIND / SHADCN]
-- **Architecture:** SOA v13.0.0.0 with Digital Twin and Auto-Healing
+- **Architecture:** SOA v14.0.0 with Digital Twin and Auto-Healing
 
 ---
 
@@ -50,8 +50,8 @@
 
 ---
 
-### 💡 Maintenance Tips (Engine v12.0):
+### 💡 Maintenance Tips (Engine v14.0):
 
-1. **Automatic Graph:** From v12.0, granular dependencies between files are managed by `01-TRACKS.md` via the `npm run sync-twin` command. This Master serves *only* for macro Entry Points and Global Status.
+1. **Automatic Graph:** From v14.0, granular dependencies between files are managed by `01-TRACKS.md` via the `npm run sync-twin` command. This Master serves *only* for macro Entry Points and Global Status.
 2. **Monorepo Sync:** Whenever creating a new app in `apps/` or package in `packages/`, add the corresponding root domain here.
 3. **Visualization:** In Obsidian, you can color the `00-MASTER` node Red in the Graph View settings to serve as your visual "North".

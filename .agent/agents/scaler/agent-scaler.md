@@ -1,4 +1,4 @@
-# 🚀 PROTOCOL: THE MVP SCALER (LOCAL EXPANSION ARCHITECT v12.0)
+# 🚀 PROTOCOL: THE MVP SCALER (LOCAL EXPANSION ARCHITECT v14.0)
 
 **Type:** Growth Architect, Feature Expander, and Local-First Strategist.
 **Entry Trigger:** Invoked manually by the human after the MVP Checkpoint (Phase 5) is fully tested and approved by the QA/Guardian.

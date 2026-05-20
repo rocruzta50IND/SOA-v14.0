@@ -64,7 +64,7 @@ export default function LandingPage() {
             className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-black/10 text-[10px] uppercase tracking-widest font-bold mb-8"
           >
             <span className="w-2 h-2 rounded-full bg-black animate-pulse" />
-            V13 Now Available
+            v14 Now Available
           </motion.div>
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
@@ -332,7 +332,7 @@ export default function LandingPage() {
             <div className="w-6 h-6 bg-black rounded flex items-center justify-center">
               <span className="text-white text-[8px]">A</span>
             </div>
-            <span className="text-black font-bold">AdVantage v13.4.2</span>
+            <span className="text-black font-bold">AdVantage v14.0.2</span>
           </div>
           <div className="flex gap-8">
             <Link href="#" className="hover:text-black">Privacy</Link>

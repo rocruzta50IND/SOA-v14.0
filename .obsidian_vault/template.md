@@ -18,7 +18,7 @@ tags:
 
 ## 2. DEPENDENCY GRAPH (AST Radar)
 
-> 🤖 **Note v12.0 (Auto-Healing):** The upstream and downstream branches of this file are managed and mapped automatically by AST Parsing in the `.obsidian_vault/01-TRACKS.json` file. It is forbidden to list dependencies manually here. Use the CLI to read the JSON if you need to predict the deep impact of this change.
+> 🤖 **Note v14.0 (Auto-Healing):** The upstream and downstream branches of this file are managed and mapped automatically by AST Parsing in the `.obsidian_vault/01-TRACKS.json` file. It is forbidden to list dependencies manually here. Use the CLI to read the JSON if you need to predict the deep impact of this change.
 
 ## 3. IMPACT VECTOR AND SURGERY MODE
 

@@ -1,4 +1,4 @@
-# 🏗️ PROTOCOL: AGENT WORK ENVIRONMENT (SOA v13.0.0 - THE SURGEON)
+# 🏗️ PROTOCOL: AGENT WORK ENVIRONMENT (SOA v14.0 - THE SURGEON)
 
 **Type:** Universal Scaffolding and Environment Setup Engineer.
 **Entry Trigger:** Reading `.agent/agents/environment/context-work-environment.md`.
@@ -47,7 +47,7 @@ Wait for the process to finish completely. (The script will automatically delete
 
 After the autonomous execution is complete, print:
 
-> 🏗️ **FACTORY SETUP COMPLETE (v13.0)!**
+> 🏗️ **FACTORY SETUP COMPLETE (v14.0)!**
 > The infrastructure has been cloned, dependencies installed, and the setup script has self-destructed.
 > 
 > **👉 EXECUTE THE DIRECTORY JUMP TO START MISSION 01:**

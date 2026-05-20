@@ -8,7 +8,7 @@
 
 ## 1. PRIMARY DIRECTIVE
 **Main Objective:** [DEFINED_BY_AGENT_BASED_ON_ROADMAP]
-**Architecture:** SOA v13.0.0 (Multimodal Digital Twin + Auto-Healing)
+**Architecture:** SOA v14.0 (Multimodal Digital Twin + Auto-Healing)
 **Technical Pillar:** [MISSION_FOCUS_E_G_SECURITY_UI_API]
 **Batch Strategy:** [DOMAIN FLOW | GLOBAL SURGERY (PROPAGATION PENDING) | EMERGENCY]
 
@@ -23,9 +23,9 @@ Note to Agent: Mention Toll Rule ACTIVE. Work freely within your Domain Island (
 
 *(Add as many files as necessary to close the logical scope WITHIN this domain)*
 
-*Cut-off Note (Surgery Mode v12.0): If your refactoring breaks files OUTSIDE your current domain, complete the current domain, change the Global Status to [PROPAGATION PENDING] and delegate the external repair to the next mission.*
+*Cut-off Note (Surgery Mode v14.0): If your refactoring breaks files OUTSIDE your current domain, complete the current domain, change the Global Status to [PROPAGATION PENDING] and delegate the external repair to the next mission.*
 
-## 3. CLOSING CHECKPOINT (SOA v13.0.0 FIDELITY)
+## 3. CLOSING CHECKPOINT (SOA v14.0 FIDELITY)
 
 ### ☑ Digital Twin & Memory Integrity
 - [ ] **Context Sync:** Does the `[NAME]-context.md` file reflect the updated structure?

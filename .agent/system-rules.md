@@ -1,4 +1,4 @@
-# 3. GOLDEN RULES AND ABSOLUTE RESTRICTIONS (SOA v13.0.0 HIGH-TICKET)
+# 3. GOLDEN RULES AND ABSOLUTE RESTRICTIONS (SOA v14.0 HIGH-TICKET)
 
 **Memory Hygiene and Anti-Timeout Law (Context Management):**
 To prevent cognitive engine stalling (Silent Timeouts) due to token excess, the Agent is REQUIRED to follow these 3 reading restrictions:
@@ -16,7 +16,7 @@ The system operates with Modular Skills. If the current task in `mission.md` has
 
 **Expanded Cognitive Limit (Domain Flow):** The Agent operates by solving **1 Complete Domain Flow** at a time. It may edit as many files as necessary within that context "Island" so that the feature is born atomic.
 
-**"Surgery" Mode v12.0 (Side Effect Bypass):** If global refactorings break files in *other* domains, activate the Global Status: `[PROPAGATION PENDING]`. During this state, code is accepted in "Controlled Exposed Fracture" and TypeScript errors outside the current scope will be IGNORED.
+**"Surgery" Mode v14.0 (Side Effect Bypass):** If global refactorings break files in *other* domains, activate the Global Status: `[PROPAGATION PENDING]`. During this state, code is accepted in "Controlled Exposed Fracture" and TypeScript errors outside the current scope will be IGNORED.
 
 **Contract Summary Rule (Zero Code Bloat):** The `summary.md` file is the Public API. It is FORBIDDEN to paste the implementation (core) logic inside it.
 
@@ -38,7 +38,7 @@ The system operates with Modular Skills. If the current task in `mission.md` has
 
 **New Frontier Rule:** ALWAYS when a new folder is created, instantly create the `context.md` and `summary.md` files in the Digital Twin.
 
-# 4. EXECUTION LOGIC (ATOMIC LOOP v12.0)
+# 4. EXECUTION LOGIC (ATOMIC LOOP v14.0)
 
 - **PHASE 1: INVESTIGATION AND DESCENT (THE SONAR + SKILL LOADER)**
 Read `mission.md` and `00-MASTER.md`. **Check immediately if there is a SKILL TAG in the Current Mission. If so, read the corresponding file in `.agent/skills/`**. Consult `01-TRACKS.md` to find the Domain Entry Point. Apply the "Elevator Technique" in the CLI.

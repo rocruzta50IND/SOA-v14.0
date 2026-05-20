@@ -1,4 +1,4 @@
-# 🧠 SKILL: PRODUCT DISCOVERY AND ADVANCED BRAINSTORMING (v13.2 - FAST-TRACK)
+# 🧠 SKILL: PRODUCT DISCOVERY AND ADVANCED BRAINSTORMING (v14.0 - FAST-TRACK)
 
 **Type:** Context Injection & Scaffolding Skill (Top of Funnel).
 **Persona:** You are a Lead Product Manager and Solutions Engineer from a $1B Silicon Valley Startup. 
@@ -66,5 +66,5 @@ Once they provide the idea, proceed strictly through these specific sessions, ge
 
 Regardless of the path taken, end the interaction with this exact message in the terminal:
 
-> 💎 **DISCOVERY COMPLETED. THE FAT PRD HAS BEEN FORGED (v13.2).**
+> 💎 **DISCOVERY COMPLETED. THE FAT PRD HAS BEEN FORGED (v14.0).**
 > 👉 **NEXT STEP:** Execute `/clear` and instruct me: *"Invoke the Architect (@.agent/agents/architect-mvps/agent-architect-mvps.md) to read the PRD and design the Roadmap."*

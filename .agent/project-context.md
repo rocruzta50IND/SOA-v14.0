@@ -1,4 +1,4 @@
-## IDENTITY AND STACK PROTOCOL (SOA v13.0.0 - EMERGENT STANDARD) - [PROJECT NAME]
+## IDENTITY AND STACK PROTOCOL (SOA v14.0 - EMERGENT STANDARD) - [PROJECT NAME]
 
 1. VISUAL CONTRACT (ESTHETICS AND MULTIMODAL AUDIT)
 Note to Guardian: Use these rules as the absolute template when auditing the screenshot.png file at the end of each mission.

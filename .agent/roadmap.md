@@ -7,7 +7,7 @@
 
 > ⚠️ **Slicing Directive (Domain Flow):** When converting a Macro Task into a Mission, the Agent MUST focus on solving **1 Complete Domain Flow** at a time. If the task requires deep refactoring in multiple simultaneous domains, the Agent must use the `[PROPAGATION PENDING]` status in the master file.
 
-> 🧹 **Cognitive Hygiene Directive (The Janitor v12.0):** Upon finishing ALL tasks of a PHASE, it is MANDATORY to invoke `.agent/agents/janitor/agent-janitor.md` to clean historical waste from summaries BEFORE starting the first task of the next phase.
+> 🧹 **Cognitive Hygiene Directive (The Janitor v14.0):** Upon finishing ALL tasks of a PHASE, it is MANDATORY to invoke `.agent/agents/janitor/agent-janitor.md` to clean historical waste from summaries BEFORE starting the first task of the next phase.
 
 ---
 

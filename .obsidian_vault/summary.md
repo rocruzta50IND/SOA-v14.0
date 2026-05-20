@@ -1,4 +1,4 @@
-# TYPE: RAM MEMORY / FOLDER PUBLIC API (v12.0)
+# TYPE: RAM MEMORY / FOLDER PUBLIC API (v14.0)
 
 **target_folder:** `[apps|packages]/[workspace_name]/src/[folder_path]`
 **last_sync:** [DATE TIME]
@@ -29,7 +29,7 @@ export const LoginForm: React.FC<{ callbackUrl: string }>;
 📦 ARCHITECTURE SNAPSHOT (BLACK BOX AND JANITOR)
 Register only decisions that are not obvious reading the exported types above.
 
-🧹 Garbage Collector's Note (v12.0): To avoid "Morbid Token Obesity" causing AI amnesia, `.agent/agents/janitor/agent-janitor.md` will scan here at every Roadmap Phase turn. The Janitor will condense old logs and keep only the "Prevailing Truth".
+🧹 Garbage Collector's Note (v14.0): To avoid "Morbid Token Obesity" causing AI amnesia, `.agent/agents/janitor/agent-janitor.md` will scan here at every Roadmap Phase turn. The Janitor will condense old logs and keep only the "Prevailing Truth".
 
 [DATE] - Mission [ID]: [E.g.: We chose not to use JWT in localStorage, delegating to the external provider (Clerk).]
 
