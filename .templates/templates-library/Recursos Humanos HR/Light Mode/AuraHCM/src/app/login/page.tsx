@@ -1,0 +1,120 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/Button";
+import Link from "next/link";
+
+export default function LoginPage() {
+  return (
+    <main className="min-h-screen flex bg-background overflow-hidden">
+      {/* Visual Side */}
+      <div className="hidden lg:flex flex-1 relative bg-foreground p-20 flex-col justify-between overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/20 blur-[150px] rounded-full -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/10 blur-[100px] rounded-full translate-y-1/2 -translate-x-1/2" />
+
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+          className="relative z-10"
+        >
+          <div className="flex items-center gap-2 mb-20">
+            <div className="w-8 h-8 bg-primary rounded-full" />
+            <span className="font-serif text-3xl text-background tracking-tighter">AuraHCM</span>
+          </div>
+          
+          <h2 className="font-serif text-7xl text-background tracking-tighter leading-none mb-8">
+            Welcome back <br /> to the <span className="italic text-primary">Future.</span>
+          </h2>
+          <p className="max-w-md text-muted-foreground/80 leading-relaxed">
+            Log in to your executive dashboard and continue orchestrating your global talent.
+          </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.4 }}
+          transition={{ duration: 2, delay: 0.5 }}
+          className="relative z-10"
+        >
+          <div className="text-[10px] uppercase tracking-[0.3em] font-bold text-background/60">
+            SECURE ACCESS // ENCRYPTED END-TO-END
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Form Side */}
+      <div className="flex-1 flex flex-col items-center justify-center p-8 md:p-20 relative">
+        <div className="w-full max-w-md">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <div className="mb-12">
+              <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-primary block mb-4">
+                Authentication
+              </span>
+              <h1 className="font-serif text-4xl md:text-5xl tracking-tighter mb-4">Account Login</h1>
+              <p className="text-muted-foreground">
+                Enter your credentials to access the platform.
+              </p>
+            </div>
+
+            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+              <div className="space-y-2">
+                <label className="text-[10px] uppercase tracking-widest font-bold text-muted-foreground">
+                  Corporate Email
+                </label>
+                <input
+                  type="email"
+                  placeholder="executive@globalcorp.com"
+                  className="w-full bg-muted/50 border border-border/50 rounded-none px-6 py-4 text-sm focus:outline-none focus:border-primary/50 transition-colors"
+                />
+              </div>
+              <div className="space-y-2">
+                <div className="flex justify-between">
+                  <label className="text-[10px] uppercase tracking-widest font-bold text-muted-foreground">
+                    Password
+                  </label>
+                  <a href="#" className="text-[10px] uppercase tracking-widest font-bold text-primary hover:opacity-80">
+                    Forgot?
+                  </a>
+                </div>
+                <input
+                  type="password"
+                  placeholder="••••••••"
+                  className="w-full bg-muted/50 border border-border/50 rounded-none px-6 py-4 text-sm focus:outline-none focus:border-primary/50 transition-colors"
+                />
+              </div>
+
+              <div className="pt-4">
+                <Link href="/dashboard">
+                  <Button className="w-full" size="lg">
+                    Sign In
+                  </Button>
+                </Link>
+              </div>
+            </form>
+
+            <div className="mt-12 text-center">
+              <p className="text-sm text-muted-foreground">
+                New to the platform?{" "}
+                <Link href="/register" className="font-bold text-foreground hover:text-primary transition-colors">
+                  Request an Invite
+                </Link>
+              </p>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Floating Branding for mobile */}
+        <div className="lg:hidden absolute top-8 left-8 flex items-center gap-2">
+          <div className="w-6 h-6 bg-primary rounded-full" />
+          <span className="font-serif text-xl tracking-tighter">AuraHCM</span>
+        </div>
+      </div>
+    </main>
+  );
+}

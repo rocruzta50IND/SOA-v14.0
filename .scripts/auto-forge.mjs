@@ -44,15 +44,14 @@ const cat = categories[Math.floor(Math.random() * categories.length)];
 const theme = THEMES[Math.floor(Math.random() * THEMES.length)];
 const designTier = Math.floor(Math.random() * 3) + 1;
 
-// 🔒 PROMPTS BLINDADOS E PARALELIZADOS
+// 🔒 PROMPTS BLINDADOS (SEM VÍDEO, APENAS CÓDIGO E FOTOS)
 const prompts = [
     `Leia e EXECUTE rigorosamente o que pede o forge/1-iniciar.md. Categoria: [${cat}], Modo de Tema: [${theme}], Design Tier: [Tier ${designTier}]. Gere e salve o arquivo forge-context.md.`,
     `Leia e EXECUTE as ordens de forge/2a-setup.md. LEIA TAMBÉM forge/tiers/tier-${designTier}.md. ATENÇÃO: Se for instalar pacotes (npm/npx), você é OBRIGADO a executar dentro do diretório forge/sandbox/. Nunca instale na raiz.`,
     `Leia e EXECUTE as ordens de forge/2b-public-ui.md. LEIA TAMBÉM forge/tiers/tier-${designTier}.md para manter a consistência da Persona.`,
     `Leia e EXECUTE as ordens de forge/2c-internal-ui.md. LEIA TAMBÉM forge/tiers/tier-${designTier}.md para manter a consistência da Persona.`,
     `Leia e EXECUTE as ordens de forge/3a-capturar.md.`,
-    `Leia e EXECUTE as ordens de forge/3b-filmar.md.`,
-    `Leia e EXECUTE as ordens de forge/4-empacotar.md. DESTINO EXATO: "templates-library/${cat}/${theme}/". Leia o forge-context.md para pegar o Nome do Projeto. Mova o conteúdo do sandbox para o destino e depois APAGUE a pasta sandbox. Falhar nisto é crítico.`
+    `Leia e EXECUTE as ordens de forge/4-empacotar.md. Realize o Split Routing e crie o studio-context.json para a Agência de Vídeo. Falhar nisto é crítico.`
 ];
 
 async function sleep(ms) {
@@ -163,7 +162,7 @@ async function runQualityGate() {
     const startTime = Date.now();
     console.clear();
     console.log(`${c.cyan}${c.bold}=============================================================${c.reset}`);
-    console.log(`${c.cyan}${c.bold}🚀 AUTO-FORGE v14.0 | ESTEIRA MULTIMÍDIA PARALELA ATIVADA    ${c.reset}`);
+    console.log(`${c.cyan}${c.bold}🚀 AUTO-FORGE v14.1 | ESTEIRA DE CÓDIGO ENXUTA               ${c.reset}`);
     console.log(`${c.cyan}${c.bold}=============================================================${c.reset}\n`);
     
     console.log(`📦 Categoria : ${c.bold}${cat}${c.reset}`);
@@ -185,20 +184,11 @@ async function runQualityGate() {
         await runQualityGate();
         await sleep(10000);
 
-        // =================================================================
-        // EXECUÇÃO SIMULTÂNEA: FOTOS (PORTA 3000) + VÍDEO (PORTA 3001)
-        // =================================================================
-        console.log(`\n${c.cyan}${c.bold}📸 🎥 Disparando Motores Multimídia Paralelos...${c.reset}`);
-        
-        await Promise.all([
-            executeGeminiPhase(prompts[4], 'Fase 3A (Fotografias)', '📸'),
-            executeGeminiPhase(prompts[5], 'Fase 3B (Cinematografia)', '🎥')
-        ]);
-        
+        console.log(`\n${c.cyan}${c.bold}📸 Disparando Motor de Fotografia (Marketing)...${c.reset}`);
+        await executeGeminiPhase(prompts[4], 'Fase 3A (Fotografias)', '📸');
         await sleep(5000);
-        // =================================================================
         
-        await executeGeminiPhase(prompts[6], 'Fase 4 (Empacotar)', '📦');
+        await executeGeminiPhase(prompts[5], 'Fase 4 (Empacotar & Handshake)', '📦');
 
         const totalSeconds = Math.floor((Date.now() - startTime) / 1000);
         const mins = Math.floor(totalSeconds / 60);
@@ -207,7 +197,7 @@ async function runQualityGate() {
         process.stdout.write('\x07\x07\x07'); 
         console.log(`\n${c.green}${c.bold}✨ SUCESSO ABSOLUTO!${c.reset}`);
         console.log(`⏱️  Tempo Total da Fábrica: ${c.bold}${mins > 0 ? `${mins}m ` : ''}${secs}s${c.reset}`);
-        console.log(`📁 Template polido e ativos de marketing gerados com sucesso!\n`);
+        console.log(`📁 Template polido e entregue. Aguardando processamento da Agência de Vídeo.\n`);
 
     } catch (error) {
         console.error(`\n${c.yellow}❌ Ciclo interrompido.${c.reset}`, error);
