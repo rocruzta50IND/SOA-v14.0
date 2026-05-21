@@ -12,38 +12,43 @@
 4. **Responsive Typography:** Enormous text (`text-6xl`, `text-8xl`) MUST use `leading-none` to prevent overlapping. Do not let text float without context; add micro-labels (`text-[10px] uppercase tracking-widest`) above big headers.
 5. **Anti-AI Aesthetic:** DO NOT use default sans-serif for everything. You MUST mix Serif and Sans-serif fonts. DO NOT use generic rounded boxes; use sharp edges or perfectly pill-shaped buttons.
 
-## 🎨 1. MANDATORY HSL TOKENS (For globals.css)
-When setting up `globals.css`, you MUST use these exact luxury boutique tokens. Focus on warm, deep backgrounds and muted gold/champagne accents.
-- **Light Mode:**
-  --background: 40 33% 98%; 
-  --foreground: 20 14% 4%;
-  --card: 0 0% 100%;
-  --card-foreground: 20 14% 4%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 20 14% 4%;
-  --primary: 43 74% 49%; 
-  --primary-foreground: 0 0% 100%;
-  --secondary: 40 10% 90%;
-  --secondary-foreground: 20 14% 4%;
-  --muted: 40 10% 90%;
-  --muted-foreground: 25 5% 45%;
-  --border: 40 10% 85%;
-  --radius: 0rem; 
+## 🎨 1. MANDATORY HSL TOKENS (TAILWIND v4 @theme DIRECTIVE)
+When setting up `globals.css`, you MUST strictly use the new Tailwind v4 `@theme` directive. Focus on warm, deep backgrounds and muted gold/champagne accents.
 
-- **Dark Mode (.dark):**
-  --background: 20 14% 4%; 
-  --foreground: 40 33% 98%;
-  --card: 20 14% 4%;
-  --card-foreground: 40 33% 98%;
-  --popover: 20 14% 4%;
-  --popover-foreground: 40 33% 98%;
-  --primary: 43 74% 49%; 
-  --primary-foreground: 20 14% 4%;
-  --secondary: 20 10% 10%;
-  --secondary-foreground: 40 33% 98%;
-  --muted: 20 10% 10%;
-  --muted-foreground: 40 10% 60%;
-  --border: 20 10% 15%;
+```css
+@import "tailwindcss";
+
+@theme {
+  --color-background: hsl(40 33% 98%);
+  --color-foreground: hsl(20 14% 4%);
+  --color-card: hsl(0 0% 100%);
+  --color-card-foreground: hsl(20 14% 4%);
+  --color-primary: hsl(43 74% 49%);
+  --color-primary-foreground: hsl(0 0% 100%);
+  --color-secondary: hsl(40 10% 90%);
+  --color-secondary-foreground: hsl(20 14% 4%);
+  --color-muted: hsl(40 10% 90%);
+  --color-muted-foreground: hsl(25 5% 45%);
+  --color-border: hsl(40 10% 85%);
+  --radius-none: 0rem;
+}
+
+@layer base {
+  .dark {
+    --color-background: hsl(20 14% 4%);
+    --color-foreground: hsl(40 33% 98%);
+    --color-card: hsl(20 14% 4%);
+    --color-card-foreground: hsl(40 33% 98%);
+    --color-primary: hsl(43 74% 49%);
+    --color-primary-foreground: hsl(20 14% 4%);
+    --color-secondary: hsl(20 10% 10%);
+    --color-secondary-foreground: hsl(40 33% 98%);
+    --color-muted: hsl(20 10% 10%);
+    --color-muted-foreground: hsl(40 10% 60%);
+    --color-border: hsl(20 10% 15%);
+  }
+}
+```
 
 ## 📐 2. TYPOGRAPHY & FONTS (Next/Font)
 - You MUST import and mix TWO fonts from `next/font/google`: `Playfair_Display` (for massive editorial headings) and `Inter` (for readable body and micro-labels).

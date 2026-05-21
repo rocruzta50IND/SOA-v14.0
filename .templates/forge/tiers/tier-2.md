@@ -10,25 +10,30 @@
 2. **Landing Page Mandate:** The Landing page MUST physically render 5 dense sections: Hero, Social Proof, Bento Features, Pricing, FAQ. 
 3. **Structural Sanity:** Always use CSS Grid (Bento Box style) to organize content. No floating text. Every piece of data must live inside a premium card.
 4. **Responsive Typography:** Never use text larger than `text-[120px]`. Always use `leading-tight` to prevent descender clipping.
-5. **Anti-AI Aesthetic:** DO NOT use flat opaque gray backgrounds for cards. You MUST use translucent glassmorphism (`bg-white/5 backdrop-blur-md`) and glowing orbs in the background to create depth.
+5. **Anti-AI Aesthetic:** DO NOT use flat opaque gray backgrounds for cards. You MUST use translucent glassmorphism (`bg-white/5 backdrop-blur-md border border-white/10`) and glowing orbs in the background to create depth.
 
-## 🎨 1. MANDATORY HSL TOKENS (For globals.css)
-When setting up `globals.css`, you MUST use these exact deep dark mode tokens with vibrant accents. This Tier is strictly Dark Mode native.
-- **Dark Mode (Default & .dark):**
-  --background: 240 10% 3.9%;
-  --foreground: 0 0% 98%;
-  --card: 240 10% 3.9%;
-  --card-foreground: 0 0% 98%;
-  --popover: 240 10% 3.9%;
-  --popover-foreground: 0 0% 98%;
-  --primary: 226.3 70.6% 58.2%;
-  --primary-foreground: 0 0% 100%;
-  --secondary: 240 3.7% 15.9%;
-  --secondary-foreground: 0 0% 98%;
-  --muted: 240 3.7% 15.9%;
-  --muted-foreground: 240 5% 64.9%;
-  --border: 240 3.7% 15.9%;
-  --radius: 1rem;
+## 🎨 1. MANDATORY HSL TOKENS (TAILWIND v4 @theme DIRECTIVE)
+When setting up `globals.css`, you MUST use the new Tailwind v4 `@theme` directive. This Tier is strictly **Dark Mode native**. Use these exact deep dark mode tokens with vibrant accents:
+
+```css
+@import "tailwindcss";
+
+@theme {
+  --color-background: hsl(240 10% 3.9%);
+  --color-foreground: hsl(0 0% 98%);
+  --color-card: hsl(240 10% 3.9%);
+  --color-card-foreground: hsl(0 0% 98%);
+  --color-primary: hsl(226.3 70.6% 58.2%);
+  --color-primary-foreground: hsl(0 0% 100%);
+  --color-secondary: hsl(240 3.7% 15.9%);
+  --color-secondary-foreground: hsl(0 0% 98%);
+  --color-muted: hsl(240 3.7% 15.9%);
+  --color-muted-foreground: hsl(240 5% 64.9%);
+  --color-border: hsl(240 3.7% 15.9%);
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+}
+```
 
 ## 📐 2. TYPOGRAPHY & FONTS (Next/Font)
 - You MUST import and use `Inter` (for UI/body) and `JetBrains_Mono` (for data, SKUs, numbers) from `next/font/google`.

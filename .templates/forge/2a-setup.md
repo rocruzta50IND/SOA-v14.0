@@ -2,7 +2,7 @@
 
 **hook:** Read and obey `forge/regras.md` and `forge/skill-design-tiers.md` before proceeding. Read `forge/forge-context.md` to know the Theme Mode and Design Tier.
 
-**Role:** You are the Forge Setup Engineer. Your ONLY job is to create the Next.js foundation, configure Tailwind, and setup CSS tokens.
+**Role:** You are the Forge Setup Engineer. Your ONLY job is to create the Next.js foundation, configure Tailwind, setup CSS tokens, and pre-install ALL necessary dependencies.
 **Environment:** `forge/`
 
 ## ⚠️ STRICT SETUP DIRECTIVES
@@ -20,9 +20,10 @@
    Initialize Next.js exactly into the `sandbox` folder (e.g., `npx create-next-app@latest sandbox --ts --tailwind --eslint --app --src-dir --import-alias "@/*" --use-npm`).
    Then run: `cd sandbox`
 
-2. **Dependencies (STANDARD STACK):**
+2. **Dependencies (STANDARD STACK & MULTIMEDIA):**
    - Execute: `npm install lucide-react recharts clsx tailwind-merge framer-motion --prefer-offline --silent`
    - Execute: `npm install -D tailwindcss postcss autoprefixer --prefer-offline --silent`
+   - **[CRITICAL - MEDIA TOOLS]:** Execute: `npm install -D puppeteer-core kill-port playwright fluent-ffmpeg @ffmpeg-installer/ffmpeg --prefer-offline --silent`
    - If **Duo Model** was selected in context: Execute `npm install next-themes --silent`.
 
 3. **The "CN" Utility:**
@@ -45,5 +46,5 @@
    - (Always include `@tailwind base; @tailwind components; @tailwind utilities;` at the top).
 
 5. *Print:* > ⚙️ **INFRAESTRUTURA E TOKENS CONFIGURADOS!**
-> O Next.js foi instalado, as dependências cacheadas, e o globals.css foi rigorosamente adaptado para o Design Tier exigido.
+> O Next.js foi instalado, as dependências cacheadas, e o globals.css foi rigorosamente adaptado para o Design Tier exigido. O arsenal multimídia foi pré-instalado.
 > **[🛑 STOP AND END TASK]**

@@ -12,26 +12,35 @@
 4. **Responsive Typography:** Never use text larger than `text-7xl`. Always use `leading-tight` or `leading-none` for big headers to prevent clipping. Headers must be accompanied by subtitles and badges.
 5. **Anti-AI Aesthetic:** DO NOT use generic gray rounded boxes or heavy drop shadows. Rely exclusively on sharp 1px borders (`border-border`), absolute flat surfaces, and monochrome contrast.
 
-## 🎨 1. MANDATORY HSL TOKENS (For globals.css)
-When setting up `globals.css`, you MUST use these exact neutral, high-contrast monochrome values.
-- **Light Mode:**
-  --background: 0 0% 100%;
-  --foreground: 0 0% 3.9%;
-  --border: 0 0% 89.8%;
-  --primary: 0 0% 9%;
-  --primary-foreground: 0 0% 98%;
-  --muted: 0 0% 96.1%;
-  --muted-foreground: 0 0% 45.1%;
-  --radius: 0.3rem;
+## 🎨 1. MANDATORY HSL TOKENS (TAILWIND v4 @theme DIRECTIVE)
+When setting up `globals.css`, you MUST strictly use the new Tailwind v4 `@theme` directive to map the HSL tokens. Use these exact neutral, high-contrast monochrome values:
 
-- **Dark Mode (.dark):**
-  --background: 0 0% 3.9%;
-  --foreground: 0 0% 98%;
-  --border: 0 0% 14.9%;
-  --primary: 0 0% 98%;
-  --primary-foreground: 0 0% 9%;
-  --muted: 0 0% 14.9%;
-  --muted-foreground: 0 0% 63.9%;
+```css
+@import "tailwindcss";
+
+@theme {
+  --color-background: hsl(0 0% 100%);
+  --color-foreground: hsl(0 0% 3.9%);
+  --color-border: hsl(0 0% 89.8%);
+  --color-primary: hsl(0 0% 9%);
+  --color-primary-foreground: hsl(0 0% 98%);
+  --color-muted: hsl(0 0% 96.1%);
+  --color-muted-foreground: hsl(0 0% 45.1%);
+  --radius-md: 0.3rem;
+}
+
+@layer base {
+  .dark {
+    --color-background: hsl(0 0% 3.9%);
+    --color-foreground: hsl(0 0% 98%);
+    --color-border: hsl(0 0% 14.9%);
+    --color-primary: hsl(0 0% 98%);
+    --color-primary-foreground: hsl(0 0% 9%);
+    --color-muted: hsl(0 0% 14.9%);
+    --color-muted-foreground: hsl(0 0% 63.9%);
+  }
+}
+```
 
 ## 📐 2. TYPOGRAPHY & FONTS (Next/Font)
 - You MUST import and use `Inter` or `Geist` from `next/font/google`.
